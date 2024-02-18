@@ -1,0 +1,43 @@
+.home {
+  padding: 20px;
+  text-align: center;
+}
+
+.home h1 {
+  margin-bottom: 10px;
+}
+
+.home p {
+  margin-bottom: 20px;
+}
+
+/* If using a list to display shows */
+.home ul {
+  list-style-type: none; /* Removes the default list bullet */
+  padding: 0;
+}
+
+.home li {
+  margin-bottom: 5px; /* Adds some space between list items */
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
