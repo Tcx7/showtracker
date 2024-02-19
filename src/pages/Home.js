@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Home.css"; // Adjust the path based on your file structure
 
 const Home = () => {
-  const [shows, setShows] = useState(["Show 1", "Show 2", "Anime 1"]); // Initial list
+  const [shows, setShows] = useState([]); // Initial list
   const [newShow, setNewShow] = useState(""); // For the input field
 
   // Function to add a new show
@@ -10,6 +10,13 @@ const Home = () => {
     if (!newShow) return; // Prevent adding empty strings
     setShows([...shows, newShow]);
     setNewShow(""); // Reset input field
+  };
+
+  // Function to add a new show with "Enter" key
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      addShow();
+    }
   };
 
   // Function to delete a show
@@ -29,6 +36,7 @@ const Home = () => {
         value={newShow}
         onChange={(e) => setNewShow(e.target.value)}
         placeholder="Add new show"
+        onKeyDown={handleEnter}
       />
       <button onClick={addShow}>Add Show</button>
 
