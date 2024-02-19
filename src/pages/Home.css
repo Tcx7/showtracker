@@ -41,3 +41,17 @@ input[type="text"] {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
+.list {
+  /* font-size: 30px; */
+  display: flex;
+  flex-direction: row;
+}
+
+#deletebtn {
+  display: flex;
+}
+
+.listblock {
+  margin: 25px;
+}
