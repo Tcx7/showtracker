@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css"; // Adjust the path based on your file structure
 import axios from "axios";
+import Imagesearch from "../assets/Imagesearch";
 
 const Home = () => {
   const [shows, setShows] = useState([]); // Initial list
@@ -10,6 +11,14 @@ const Home = () => {
     fetchShows();
   }, []);
 
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchComplete = (imageUrl) => {
+    // Do something with the imageUrl returned from ImageSearch
+    console.log(imageUrl);
+  };
+
+  // Function to fetch from database
   const fetchShows = async () => {
     const response = await axios.get("http://localhost:3306/shows");
     setShows(response.data);
@@ -22,6 +31,7 @@ const Home = () => {
       const response = await axios.post("http://localhost:3306/shows", {
         title: newShow,
       });
+      console.log(response.data.title); //$$$$$$$$$$$$$$$$$$$$$$$
       setShows([...shows, response.data]);
       setNewShow(""); // Reset input field after successful add
     } catch (error) {
@@ -55,7 +65,6 @@ const Home = () => {
     <div className="home">
       <h1>Welcome to My Show Tracker</h1>
       <p>Keep track of all your favorite shows and animes in one place.</p>
-
       {/* Input field and Add button */}
       <input
         type="text"
@@ -70,6 +79,10 @@ const Home = () => {
         {shows.map((show) => (
           <li class="listblock" key={show.id}>
             {show.title} {/* Render the title property of each show */}
+            <Imagesearch
+              initialSearchTerm={show.title}
+              onSearchComplete={handleSearchComplete}
+            />
             <button id="deletebtn" onClick={() => deleteShow(show.id)}>
               Delete
             </button>
