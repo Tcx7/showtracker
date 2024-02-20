@@ -30,14 +30,7 @@ const Imagesearch = ({ initialSearchTerm, onSearchComplete }) => {
 
   return (
     <div>
-      {/* <input
-        type="text"
-        placeholder="Enter search term"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      /> */}
-      {/* {handleSearch} */}
-      <button onClick={handleSearch}>Give me image! >:( </button>
+      <button onClick={handleSearch}>Give me image! :( </button>
       {imageUrl && (
         <div>
           <img src={imageUrl} alt="First Result" />
