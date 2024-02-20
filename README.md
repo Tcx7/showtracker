@@ -1,30 +1,64 @@
-# Getting Started with Create React App
+Show Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description
+Show Tracker is a personal tracking tool designed to help users keep track of their favorite TV shows, movies, and other media content. It offers a user-friendly interface to add, monitor, and manage your personal watchlist.
 
-## Available Scripts
+Installation
+To get the Show Tracker up and running on your local machine, follow these steps:
 
-In the project directory, you can run:
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/yourusername/showtracker.git
+Navigate to the project directory:
+bash
+Copy code
+cd showtracker
+Install front-end dependencies:
+Copy code
+npm install
+To start the front-end server:
+sql
+Copy code
+npm start
+Open a new terminal, navigate to the server directory within the project:
+bash
+Copy code
+cd server
+Install back-end dependencies:
+Copy code
+npm install
 
-### `npm start`
+Configuration
+Within the server directory, create a .env file to store your backend database configuration. Include the following information, customized to your setup:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Copy code
+DB_HOST=your_database_host
+DB_USER=your_database_user
+DB_PASS=your_database_password
+DB_NAME=your_database_name
+To start the backend server in development mode, use npm run dev
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application will be hosted on http://localhost:3000.
 
-### `npm test`
+Usage
+After installation and configuration, you can use Show Tracker to add and manage your personal show list. The interface is intuitive, allowing for easy navigation and management of your media content.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dependencies
+Show Tracker relies on several key dependencies to function:
 
-### `npm run build`
+Backend
+cors: For enabling CORS.
+dotenv: To load environment variables from a .env file.
+express: As the web server framework.
+mysql: For interacting with MySQL databases.
+nodemon: For automatically restarting the node application when file changes are detected.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend
+axios: For making HTTP requests from the browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributing
+Contributions are welcome! Please feel free to fork the repository, make your changes, and submit a pull request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+License
+This project is open source and available under the MIT License.
