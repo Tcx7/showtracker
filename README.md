@@ -7,36 +7,25 @@ Installation
 To get the Show Tracker up and running on your local machine, follow these steps:
 
 Clone the repository:
-bash
-Copy code
 git clone https://github.com/yourusername/showtracker.git
 Navigate to the project directory:
-bash
-Copy code
 cd showtracker
-Install front-end dependencies:
-Copy code
-npm install
-To start the front-end server:
-sql
-Copy code
-npm start
-Open a new terminal, navigate to the server directory within the project:
-bash
-Copy code
-cd server
-Install back-end dependencies:
-Copy code
-npm install
+
+Install front-end dependencies: npm install
+
+To start the front-end server: npm start
+
+Open a new terminal, navigate to the server directory within the project: cd server
+
+Install back-end dependencies: npm install
 
 Configuration
 Within the server directory, create a .env file to store your backend database configuration. Include the following information, customized to your setup:
-
-Copy code
 DB_HOST=your_database_host
 DB_USER=your_database_user
 DB_PASS=your_database_password
 DB_NAME=your_database_name
+
 To start the backend server in development mode, use npm run dev
 
 The application will be hosted on http://localhost:3000.
