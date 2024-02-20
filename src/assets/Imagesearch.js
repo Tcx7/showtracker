@@ -7,8 +7,8 @@ const Imagesearch = ({ initialSearchTerm, onSearchComplete }) => {
 
   const handleSearch = async () => {
     try {
-      const apiKey = "AIzaSyDsKSTwcKzsyZzpb2OhGqPh_MwMGli_W0E"; // Replace with your Google Custom Search API key
-      const searchEngineId = "b26150355b1ea4ece"; // Replace with your Google Custom Search Engine ID
+      const apiKey = ""; // Replace with your Google Custom Search API key
+      const searchEngineId = ""; // Replace with your Google Custom Search Engine ID
       const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&searchType=image&q=${encodeURIComponent(
         searchTerm
       )}`;
