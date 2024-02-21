@@ -11,8 +11,6 @@ const Home = () => {
     fetchShows();
   }, []);
 
-  const [searchTerm, setSearchTerm] = useState("");
-
   const handleSearchComplete = (imageUrl) => {
     // Do something with the imageUrl returned from ImageSearch
     console.log(imageUrl);
